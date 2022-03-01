@@ -1,5 +1,5 @@
 {
-  "name": "file-dl",
+  "name": "filedl",
   "version": "1.0.0",
   "description": "Download files from URLs with file-dl",
   "main": "index.js",
