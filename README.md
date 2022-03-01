@@ -20,4 +20,4 @@ filedl.getFile('https://faxes.zone/i/2RwpF.png', 'my-new-file.png') // Downloads
 ```
 
 ### License
-Under the [MIT license]()
+Under the [MIT license](https://github.com/FAXES/filedl/blob/main/LICENSE.md)
