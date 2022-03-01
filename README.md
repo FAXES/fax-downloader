@@ -1,6 +1,6 @@
 # File Downloader
 
-Download files from URLs with file-dl. This works for image downloads and any file that is hosted an a CDN.
+Download files from URLs with fax-downloader. This works for image downloads and any file that is hosted an a CDN.
 
 
 ### Params
