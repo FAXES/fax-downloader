@@ -1,5 +1,5 @@
 {
-  "name": "filedl",
+  "name": "@faxes/file-dl",
   "version": "1.0.0",
   "description": "Download files from URLs with file-dl",
   "main": "index.js",
