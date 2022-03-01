@@ -1,0 +1,14 @@
+{
+  "name": "file-dl",
+  "version": "1.0.0",
+  "description": "Download files from URLs with file-dl",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "FAXES",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
