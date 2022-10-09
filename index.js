@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-module.exports.getFile = (url, dest, ...options) => new Promise((resolve, reject) => {
+module.exports.getFile = (url, dest, options) => new Promise((resolve, reject) => {
     const req = url.trim().startsWith('https') ? require('https') : require('http');
-    req.get(url, options, (res) => {
+    req.get(url, options || null, (res) => {
         if(res.statusCode !== 200) {
             res.resume();
             return reject(console.warn(`Request Failed.\nStatus Code: ${res.statusCode}`));

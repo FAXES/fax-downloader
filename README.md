@@ -1,6 +1,6 @@
 # File Downloader
 
-Download files from URLs with fax-downloader. This works for image downloads and any file that is hosted an a CDN.
+Download files from URLs and save to a defined location. Downloading file just got that little easier.
 
 
 ### Params
@@ -8,15 +8,18 @@ Download files from URLs with fax-downloader. This works for image downloads and
 - dest *(required)* - The destination from the node process location to save the file too.
 
 ### Options (Object)
-- timeout *(required)* - Timeout in ms of the HTTP request timeout
+Other options can include those within HTTP.request - https://nodejs.org/api/http.html#httprequestoptions-callback
 
 ### Example Usage
 
 ```js
-const filedl = require('filedl');
-filedl.getFile('https://faxes.zone/i/2RwpF.png', 'my-new-file.png') // Downloads file via Promise to location.
-
-// Console log return: {filename: 'my-new-file.png', dir:'/home/nodeapp/my-new-file.png'}
+let options = {
+    url: `http://your.domain`,
+    dest: `/save/location`,
+}
+faxDl.getFile(options.url, options.dest, /*{other: options}*/).then(function({filename}) {
+    // Do something cool with the downloaded file.
+});
 ```
 
 ### License
