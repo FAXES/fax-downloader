@@ -17,8 +17,14 @@ let options = {
     url: `http://your.domain`,
     dest: `/save/location`,
 }
-faxDl.getFile(options.url, options.dest, /*{other: options}*/).then(function({filename}) {
-    // Do something cool with the downloaded file.
+faxDl.getFile(options.url, options.dest, /*{other: options}*/).then(function(fileResult) {
+    /*
+    fileResult = {
+        dest: `/save/location`,
+        status: 200,
+        error: `error`,
+    }
+    */
 });
 ```
 

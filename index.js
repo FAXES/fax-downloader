@@ -6,12 +6,12 @@ module.exports.getFile = (url, dest, options = {}) => new Promise((resolve, reje
     req.get(url, options, (res) => {
         if(res.statusCode !== 200) {
             res.resume();
-            return reject(console.warn(`Request Failed.\nStatus Code: ${res.statusCode}`));
+            resolve({status: res.statusCode, error: res.statusCode})
         }
         res.pipe(fs.createWriteStream(path.dirname(require.main.filename)+'/'+dest))
-        .on('error', (err) => reject(console.warn(`Request Failed. Error:\n${err}\n`)))
+        .on('error', (err) => resolve({status: res.statusCode, error: err}))
         .once('close', () => resolve({dest: dest, status: res.statusCode}));
     })
-    .on('timeout', (err) => reject(console.warn(`Request Failed. Timeout:\n${err}\n`)))
-    .on('error', (err) => reject(console.warn(`Request Failed. Error:\n${err}\n`)));
+    .on('timeout', (err) => resolve({status: res.statusCode, error: err}))
+    .on('error', (err) => resolve({status: res.statusCode, error: err}));
 })
