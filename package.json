@@ -1,7 +1,7 @@
 {
   "name": "fax-downloader",
-  "version": "1.0.6",
-  "description": "Download files from URLs with fax-downloader. This works for image downloads and any file that is hosted an a CDN.",
+  "version": "1.0.7",
+  "description": "Download files from URLs with fax-downloader. This works for image downloads and any file that is hosted on a CDN.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
