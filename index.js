@@ -12,6 +12,6 @@ module.exports.getFile = (url, dest, options = {}) => new Promise((resolve, reje
         .on('error', (err) => resolve({status: res.statusCode, error: err}))
         .once('close', () => resolve({dest: dest, status: res.statusCode}));
     })
-    .on('timeout', (err) => resolve({status: res.statusCode, error: err}))
-    .on('error', (err) => resolve({status: res.statusCode, error: err}));
+    .on('timeout', (err) => resolve({status: res?.statusCode, error: err}))
+    .on('error', (err) => resolve({status: res?.statusCode || 500, error: err}));
 })
