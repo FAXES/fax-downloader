@@ -1,6 +1,6 @@
 {
   "name": "fax-downloader",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "ownload files from URLs with fax-downloader. This works for image downloads and any file that is hosted on a CDN.",
   "main": "index.js",
   "scripts": {
