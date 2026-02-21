@@ -29,7 +29,7 @@ Downloads a remote file and returns its data as a Buffer.
 ```js
 const faxDl = require('fax-downloader');
 (async () => {
-    const result = await faxDl.getSync("https://example.com/file.json");
+    const result = await faxDl.getBuffer("https://example.com/file.json");
     if(result.data) {
         console.log(result.data.toString());
     }
